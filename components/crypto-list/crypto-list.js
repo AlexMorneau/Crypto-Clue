@@ -1,8 +1,10 @@
 import CryptoCoin from '../crypto-coin/crypto-coin';
+import CryptoCoinTitleRow from '../crypto-coin/crypto-coin-title-row';
 
 export default function CryptoList({ filteredCoins }) {
     return (
         <div>
+        <CryptoCoinTitleRow />
             {
                 filteredCoins.map((coin) => {
                     return (
@@ -10,12 +12,12 @@ export default function CryptoList({ filteredCoins }) {
                         id={coin.id}
                         key={coin.id}
                         name={coin.name}
-                        price={coin.current_price}
+                        current_price={coin.current_price}
                         symbol={coin.symbol}
-                        marketcap={coin.market_cap}
-                        volume={coin.total_volume}
+                        market_cap={coin.market_cap}
+                        total_volume={coin.total_volume}
                         image={coin.image}
-                        priceChange={coin.price_change_percentage_24h} 
+                        price_change_percentage_24h={coin.price_change_percentage_24h} 
                         />
                     )
                 })

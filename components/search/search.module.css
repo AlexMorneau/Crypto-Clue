@@ -1,20 +1,29 @@
-.coin_search {
-    margin-bottom: 64px;
-    display: flex;
-    align-items: center;
+.coin_search_container {
     width: 300px;
+    margin-bottom: 64px;
 }
 
-.coin_input {
-    background: #222531;
-    border: none;
+.coin_search_bar {
+    background: transparent;
+    border-bottom: 1px solid rgb(214, 172, 253, 0.5);
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
     padding: 16px;
-    border-radius: 4px;
+    border-radius: 0px;
     outline: none;
     height: 100%;
     width: 100%;
+    text-align: center;
+    color: rgb(214, 214, 214);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
 }
 
-.coin_input::placeholder {
+.coin_search_bar::placeholder {
     color: #e2e2e2;
+}
+
+.coin_search_bar:focus::placeholder {
+    color: transparent;
 }
